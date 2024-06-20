@@ -1,5 +1,8 @@
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import type { Metadata } from 'next';
-import './globals.css';
+// import './globals.css';
+import { ThemeProvider } from '@mui/material';
+import theme from '../styles/theme';
 
 export const metadata: Metadata = {
   title: 'Orange X',
@@ -16,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
