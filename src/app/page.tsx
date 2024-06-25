@@ -25,6 +25,7 @@ import {
   Statistics,
   Stats,
 } from '../../public/icons';
+import Input from '@/components/Input';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -34,7 +35,19 @@ export default function Home() {
   };
   return (
     <main>
-      <Box>
+      <Input
+        label={'E-mail'}
+        type="password"
+        variant="outlined"
+        id="email-login"
+      />
+      <Input
+        type="text"
+        id="search"
+        variant="filled"
+        placeholder="Search Twitter"
+      />
+      {/* <Box>
         <Typography variant="subtitle2">Hello, World</Typography>
         <Button variant="primaryContained">seguir</Button>
         <Button variant="outlined">seguir</Button>
@@ -51,7 +64,7 @@ export default function Home() {
         <Tab label="Tweets & replies" value="2" />
         <Tab label="Media" value="3" />
         <Tab label="Likes" value="4" />
-      </Tabs>
+      </Tabs> */}
       {/* <MenuList variant="menu">
         <MenuItem>
           <ListItemIcon sx={{ width: '50px', height: '50px' }}>
