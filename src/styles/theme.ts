@@ -66,6 +66,7 @@ const theme = createTheme({
   palette: {
     primary: { main: '#DC6400' },
     secondary: { main: '#536471' },
+    grey: { '100': '#5C6C79' },
     text: {
       primary: '#000000',
       secondary: '#FFFFFF',
@@ -79,6 +80,50 @@ const theme = createTheme({
     success: { main: '#0CB245' },
   },
   components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& label': {
+            color: '#000000',
+          },
+          '& focus': {
+            color: '#DC6400',
+          },
+          '& .Mui-error': {
+            color: '#EF1C5C',
+            borderColor: '#EF1C5C',
+          },
+        },
+      },
+      variants: [
+        {
+          props: { variant: 'filled' },
+          style: {
+            color: '#5C6C79',
+            backgroundColor: '#EFF3F4',
+            borderRadius: '30px',
+            fontSize: '1.125rem',
+            '.Mui-focused': {
+              border: '2px solid #DC6400',
+              borderRadius: '30px',
+            },
+            '.MuiInputBase-root': {
+              backgroundColor: 'transparent',
+              alignItems: 'baseline',
+              '&:: before, &:: after': {
+                borderBottom: 'none !important',
+              },
+              '&:hover, &::selection': {
+                backgroundColor: 'transparent',
+              },
+              '.MuiInputBase-input': {
+                padding: '15px 12px !important',
+              },
+            },
+          },
+        },
+      ],
+    },
     MuiButton: {
       variants: [
         {
@@ -167,6 +212,13 @@ const theme = createTheme({
           backgroundColor: '#1DA1F2',
           height: '4px',
           borderRadius: '50px',
+        },
+      },
+    },
+    MuiSvgIcon: {
+      styleOverrides: {
+        root: {
+          color: 'currentColor',
         },
       },
     },
