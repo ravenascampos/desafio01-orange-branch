@@ -27,6 +27,7 @@ import {
 } from '../../public/icons';
 import Input from '@/components/Input';
 import Button from '@/components/Button';
+import Link from '@/components/Link';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -36,7 +37,8 @@ export default function Home() {
   };
   return (
     <main>
-      <Button variant="primaryContained" text="Log In" />
+      <Link href="jfj" text="Termos de Serviço" variant="body2" />
+      {/* <Button variant="primaryContained" text="Log In" />
       <Button variant="secondaryContained" text="Seguir" />
       <Button variant="outlined" text="Entre com e-mail" />
       <Button
@@ -49,7 +51,7 @@ export default function Home() {
         text="Entre com o Google"
         icon={<Apple />}
       />
-      <Button variant="text" text="Esqueceu a senha?" />
+      <Button variant="text" text="Esqueceu a senha?" /> */}
       {/* <Input
         label={'E-mail'}
         type="password"
