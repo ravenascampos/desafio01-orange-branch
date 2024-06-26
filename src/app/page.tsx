@@ -28,6 +28,7 @@ import {
 import Input from '@/components/Input';
 import Button from '@/components/Button';
 import Link from '@/components/Link';
+import Textarea from '@/components/Textarea';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -37,7 +38,8 @@ export default function Home() {
   };
   return (
     <main>
-      <Link href="jfj" text="Termos de Serviço" variant="body2" />
+      <Textarea />
+      {/* <Link href="jfj" text="Termos de Serviço" variant="body2" /> */}
       {/* <Button variant="primaryContained" text="Log In" />
       <Button variant="secondaryContained" text="Seguir" />
       <Button variant="outlined" text="Entre com e-mail" />
