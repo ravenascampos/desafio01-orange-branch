@@ -1,7 +1,6 @@
 'use client';
 import {
   Box,
-  Button,
   ListItemIcon,
   ListItemText,
   MenuItem,
@@ -24,8 +23,10 @@ import {
   Schedule,
   Statistics,
   Stats,
+  Google,
 } from '../../public/icons';
 import Input from '@/components/Input';
+import Button from '@/components/Button';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -35,7 +36,21 @@ export default function Home() {
   };
   return (
     <main>
-      <Input
+      <Button variant="primaryContained" text="Log In" />
+      <Button variant="secondaryContained" text="Seguir" />
+      <Button variant="outlined" text="Entre com e-mail" />
+      <Button
+        variant="outlinedIcon"
+        text="Entre com o Google"
+        icon={<Google />}
+      />
+      <Button
+        variant="outlinedIcon"
+        text="Entre com o Google"
+        icon={<Apple />}
+      />
+      <Button variant="text" text="Esqueceu a senha?" />
+      {/* <Input
         label={'E-mail'}
         type="password"
         variant="outlined"
@@ -46,7 +61,7 @@ export default function Home() {
         id="search"
         variant="filled"
         placeholder="Search Twitter"
-      />
+      /> */}
       {/* <Box>
         <Typography variant="subtitle2">Hello, World</Typography>
         <Button variant="primaryContained">seguir</Button>

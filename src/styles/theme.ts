@@ -174,6 +174,19 @@ const theme = createTheme({
           },
         },
         {
+          props: { variant: 'outlinedIcon' },
+          style: {
+            backgroundColor: '#FFFFFF',
+            border: '1px solid #00000066',
+            borderRadius: '50px',
+            color: '#000000',
+            '&:hover': {
+              color: '#DC6400',
+              border: '1px solid #DC6400',
+            },
+          },
+        },
+        {
           props: { variant: 'text' },
           style: {
             color: '#1DA1F2',
@@ -229,6 +242,7 @@ declare module '@mui/material/Button' {
   interface ButtonPropsVariantOverrides {
     primaryContained: true;
     secondaryContained: true;
+    outlinedIcon: true;
   }
 }
 
