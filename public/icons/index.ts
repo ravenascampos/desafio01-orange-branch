@@ -23,6 +23,7 @@ export { default as Messages } from './Messages.svg';
 export { default as MessagesFill } from './MessagesFill.svg';
 export { default as More } from './More.svg';
 export { default as MoreFill } from './MoreFill.svg';
+export { default as MoreHorizontal } from './MoreHorizontal.svg';
 export { default as News } from './News.svg';
 export { default as Notification } from './Notification.svg';
 export { default as NotificationFill } from './NotificationFill.svg';
