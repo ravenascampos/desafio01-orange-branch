@@ -30,6 +30,7 @@ import Button from '@/components/Button';
 import Link from '@/components/Link';
 import Textarea from '@/components/Textarea';
 import DropdownMenuOptions from '@/components/DropdownMenuOptions';
+import DropdownUserInfo from '@/components/DrowpdownUserInfo';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -39,7 +40,8 @@ export default function Home() {
   };
   return (
     <main>
-      <DropdownMenuOptions />
+      <DropdownUserInfo />
+      {/* <DropdownMenuOptions /> */}
       {/* <Textarea /> */}
       {/* <Link href="jfj" text="Termos de Serviço" variant="body2" /> */}
       {/* <Button variant="primaryContained" text="Log In" />
@@ -55,8 +57,8 @@ export default function Home() {
         text="Entre com o Google"
         icon={<Apple />}
       />
-      <Button variant="text" text="Esqueceu a senha?" /> */}
-      {/* <Input
+      <Button variant="text" text="Esqueceu a senha?" />
+      <Input
         label={'E-mail'}
         type="password"
         variant="outlined"
