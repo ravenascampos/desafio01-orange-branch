@@ -157,13 +157,14 @@ const theme = createTheme({
         },
       },
     },
-    MuiMenuList: {
-      variants: [
-        {
-          props: { variant: 'menu' },
-          style: {},
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          '&.subvariant-noSelected': {
+            backgroundColor: 'transparent !important',
+          },
         },
-      ],
+      },
     },
     MuiSvgIcon: {
       styleOverrides: {

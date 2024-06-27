@@ -29,6 +29,7 @@ import Input from '@/components/Input';
 import Button from '@/components/Button';
 import Link from '@/components/Link';
 import Textarea from '@/components/Textarea';
+import DropdownMenuOptions from '@/components/DropdownMenuOptions';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -38,7 +39,8 @@ export default function Home() {
   };
   return (
     <main>
-      <Textarea />
+      <DropdownMenuOptions />
+      {/* <Textarea /> */}
       {/* <Link href="jfj" text="Termos de Serviço" variant="body2" /> */}
       {/* <Button variant="primaryContained" text="Log In" />
       <Button variant="secondaryContained" text="Seguir" />
