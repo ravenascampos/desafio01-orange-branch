@@ -10,9 +10,9 @@ import {
 import React from 'react';
 import { MoreHorizontal } from '../../../public/icons';
 
-type DropdownUserInfoProps = {};
+type SidebarUserInfoProps = {};
 
-function DropdownUserInfo({}: DropdownUserInfoProps) {
+function SidebarUserInfo({}: SidebarUserInfoProps) {
   const theme = useTheme();
   return (
     <ListItem
@@ -49,4 +49,4 @@ function DropdownUserInfo({}: DropdownUserInfoProps) {
   );
 }
 
-export default DropdownUserInfo;
+export default SidebarUserInfo;
