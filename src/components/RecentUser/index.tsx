@@ -14,13 +14,9 @@ type RecentUserProps = {};
 function RecentUser({}: RecentUserProps) {
   const theme = useTheme();
   return (
-    <ListItem
-      sx={{
-        width: '350px',
-      }}
-    >
+    <ListItem>
       <ListItemAvatar>
-        <Avatar />
+        <Avatar sx={{ width: 60, height: 60, marginRight: '1rem' }} />
       </ListItemAvatar>
       <ListItemText
         primary="User Teste"
@@ -29,11 +25,9 @@ function RecentUser({}: RecentUserProps) {
           variant: 'subtitle1',
         }}
         secondary={
-          <>
-            <Typography variant="subtitle2" color={theme.palette.text.primary}>
-              @usuarioTeste
-            </Typography>
-          </>
+          <Typography variant="subtitle2" color={theme.palette.text.primary}>
+            @usuarioTeste
+          </Typography>
         }
       />
       <Button text="Seguir" variant="secondaryContained" />

@@ -107,6 +107,7 @@ const theme = createTheme({
             backgroundColor: '#000000',
             color: '#FFFFFF',
             borderRadius: '50px',
+            width: '89px',
             '&:hover': {
               backgroundColor: '#FFFFFF',
               color: '#000000',
@@ -151,6 +152,9 @@ const theme = createTheme({
           style: {
             textTransform: 'none',
             color: '#1DA1F2',
+            fontWeight: '400',
+            fontSize: '1.125rem',
+            lineHeight: '21.09px',
           },
         },
       ],
