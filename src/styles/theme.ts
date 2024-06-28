@@ -85,6 +85,7 @@ const theme = createTheme({
         {
           props: { variant: 'primaryContained' },
           style: {
+            textTransform: 'none',
             backgroundColor: '#DC6400',
             color: '#FFFFFF',
             borderRadius: '50px',
@@ -102,6 +103,7 @@ const theme = createTheme({
         {
           props: { variant: 'secondaryContained' },
           style: {
+            textTransform: 'none',
             backgroundColor: '#000000',
             color: '#FFFFFF',
             borderRadius: '50px',
@@ -119,6 +121,7 @@ const theme = createTheme({
         {
           props: { variant: 'outlined' },
           style: {
+            textTransform: 'none',
             backgroundColor: '#FFFFFF',
             border: '1px solid #00000066',
             borderRadius: '50px',
@@ -132,6 +135,7 @@ const theme = createTheme({
         {
           props: { variant: 'outlinedIcon' },
           style: {
+            textTransform: 'none',
             backgroundColor: '#FFFFFF',
             border: '1px solid #00000066',
             borderRadius: '50px',
@@ -145,6 +149,7 @@ const theme = createTheme({
         {
           props: { variant: 'text' },
           style: {
+            textTransform: 'none',
             color: '#1DA1F2',
           },
         },
