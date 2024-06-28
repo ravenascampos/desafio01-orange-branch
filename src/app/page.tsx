@@ -31,6 +31,7 @@ import Link from '@/components/Link';
 import Textarea from '@/components/Textarea';
 import DropdownMenuOptions from '@/components/DropdownMenuOptions';
 import DropdownUserInfo from '@/components/DrowpdownUserInfo';
+import RecentUser from '@/components/RecentUser';
 
 export default function Home() {
   const [value, setValue] = useState('1');
@@ -40,7 +41,8 @@ export default function Home() {
   };
   return (
     <main>
-      <DropdownUserInfo />
+      <RecentUser />
+      {/* <DropdownUserInfo /> */}
       {/* <DropdownMenuOptions /> */}
       {/* <Textarea /> */}
       {/* <Link href="jfj" text="Termos de Serviço" variant="body2" /> */}
