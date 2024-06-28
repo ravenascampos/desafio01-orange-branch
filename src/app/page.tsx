@@ -29,7 +29,7 @@ import Input from '@/components/Input';
 import Button from '@/components/Button';
 import Link from '@/components/Link';
 import Textarea from '@/components/Textarea';
-import DropdownMenuOptions from '@/components/DropdownMenuOptions';
+import SidebarMenuOptions from '@/components/SidebarMenuOptions';
 import SidebarUserInfo from '@/components/SidebarUserInfo';
 import RecentUser from '@/components/RecentUser';
 
@@ -43,7 +43,7 @@ export default function Home() {
     <main>
       <RecentUser />
       {/* <SidebarUserInfo /> */}
-      {/* <DropdownMenuOptions /> */}
+      {/* <SidebarMenuOptions /> */}
       {/* <Textarea /> */}
       {/* <Link href="jfj" text="Termos de Serviço" variant="body2" /> */}
       {/* <Button variant="primaryContained" text="Log In" />

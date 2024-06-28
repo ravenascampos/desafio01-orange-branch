@@ -13,7 +13,7 @@ import {
   ProfileOutline,
 } from '../../../public/icons';
 
-export default function useDropdownMenuOptionsData() {
+export default function useSidebarMenuOptionsData() {
   const itemsMenu = [
     {
       icon: HomeOutline,
