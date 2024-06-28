@@ -8,12 +8,12 @@ import {
   useTheme,
 } from '@mui/material';
 import { useState } from 'react';
-import useDropdownMenuOptionsData from './DropdownMenuOptions.hooks';
+import useSidebarMenuOptionsData from './SidebarMenuOptions.hooks';
 
-type DropdownMenuOptionsProps = {};
+type SidebarMenuOptionsProps = {};
 
-function DropdownMenuOptions({}: DropdownMenuOptionsProps) {
-  const { items } = useDropdownMenuOptionsData();
+function SidebarMenuOptions({}: SidebarMenuOptionsProps) {
+  const { items } = useSidebarMenuOptionsData();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const handleListItemClick = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -66,4 +66,4 @@ function DropdownMenuOptions({}: DropdownMenuOptionsProps) {
   );
 }
 
-export default DropdownMenuOptions;
+export default SidebarMenuOptions;
