@@ -2,6 +2,7 @@
 
 import InputSelect from '@/components/InputSelect';
 import useInputSelectOptionsData from '@/components/InputSelect/InputSelectOptions.hooks';
+import TweetUser from '@/components/TwettUser';
 
 export default function Home() {
   const {
@@ -20,6 +21,15 @@ export default function Home() {
 
   return (
     <main>
+      <TweetUser
+        userName="Usuário Teste"
+        userEmail="userText"
+        date="Apr 1"
+        description="O truncamento deve ser aplicável condicionalmente nesta longa linha de texto, pois esta é uma linha muito mais longa do que o contêiner pode suportar."
+        comments="10"
+        retweets="10"
+        likes="10"
+      />
       {/* <InputSelect
         label="Mês"
         options={months}
