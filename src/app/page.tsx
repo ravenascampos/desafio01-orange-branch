@@ -20,7 +20,12 @@ export default function Home() {
   } = useInputSelectOptionsData();
 
   return (
-    <main>
+    <main
+    // style={{
+    //   width: '200px',
+    //   maxWidth: '200px',
+    // }}
+    >
       <TweetUser
         userName="Usuário Teste"
         userEmail="userText"
@@ -29,6 +34,8 @@ export default function Home() {
         comments="10"
         retweets="10"
         likes="10"
+        statistics="10"
+        imageUrl="/images/background-signup.png"
       />
       {/* <InputSelect
         label="Mês"

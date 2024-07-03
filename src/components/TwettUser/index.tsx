@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import React from 'react';
 import {
+  Bookmarks,
   Comment,
   Like,
   Retweet,
@@ -26,6 +27,8 @@ type TweetUserProps = {
   comments: React.ReactNode;
   retweets: React.ReactNode;
   likes: React.ReactNode;
+  statistics: React.ReactNode;
+  imageUrl?: string;
 };
 
 function TweetUser({
@@ -36,30 +39,53 @@ function TweetUser({
   comments,
   retweets,
   likes,
+  statistics,
+  imageUrl,
 }: TweetUserProps) {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const truncateDescription = (desc: React.ReactNode | string) => {
+    if (typeof desc === 'string' && desc.length > 55) {
+      return `${desc.substring(0, 55)}...`;
+    }
+    return desc;
+  };
   return (
-    <Grid container sx={{ maxWidth: '900px' }}>
-      <Grid container direction="row" flexWrap="nowrap">
+    <Grid container>
+      <Grid
+        container
+        direction="row"
+        flexWrap="nowrap"
+        columnGap={{ xs: 1, sm: 1, md: 1 }}
+      >
         <Grid
           container
           direction="row"
           flexWrap="nowrap"
-          columnGap={{ xs: 2, sm: 2, md: 2 }}
+          columnGap={{ xs: 1, sm: 1, md: 1 }}
           rowGap={{ xs: 2 }}
-          maxWidth={{ xs: '80%' }}
+          sx={{
+            width: isMobile ? '80%' : '100%',
+            height: 'auto',
+            maxWidth: '516px',
+          }}
         >
           <Grid item>
             <Avatar
               sx={{
-                width: isMobile ? '40px' : '60px',
-                height: isMobile ? '40px' : '60px',
+                width: '40px',
+                height: '40px',
               }}
             />
           </Grid>
-          <Grid>
-            <Grid container item alignItems="center" mb={1}>
+          <Grid sx={{ width: isMobile ? '80%' : '100%' }}>
+            <Grid
+              container
+              item
+              alignItems={isMobile ? 'flex-start' : 'center'}
+              mb={1}
+              direction={isMobile ? 'column' : 'row'}
+            >
               <Typography
                 variant="h5"
                 sx={{
@@ -71,7 +97,6 @@ function TweetUser({
               <Typography
                 sx={{
                   opacity: '60%',
-                  // ml: 1,
                 }}
                 variant="body1"
               >
@@ -79,17 +104,28 @@ function TweetUser({
               </Typography>
             </Grid>
             <Grid item mb={1}>
-              <Typography variant="body1">{description}</Typography>
+              <Typography variant="body1">
+                {truncateDescription(description)}
+              </Typography>
             </Grid>
-            <Grid item mb={2}>
-              <Image
-                src="/images/background-signup.png"
-                width={100}
-                height={100}
-                alt=""
-                sizes="100vh"
-              />
-            </Grid>
+            {imageUrl && (
+              <Grid item mb={2}>
+                <Image
+                  src="/images/background-signup.png"
+                  width={516}
+                  height={270.16}
+                  alt=""
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    maxHeight: '270.16px',
+                    maxWidth: '516px',
+                    borderRadius: '20px',
+                  }}
+                />
+              </Grid>
+            )}
+
             <Grid
               item
               container
@@ -103,7 +139,7 @@ function TweetUser({
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="center"
+                alignItems="baseline"
                 flexWrap={{ xs: 'nowrap', md: 'wrap' }}
               >
                 <IconButton>
@@ -116,7 +152,7 @@ function TweetUser({
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="center"
+                alignItems="baseline"
                 flexWrap={{ xs: 'nowrap', md: 'wrap' }}
               >
                 <IconButton>
@@ -129,7 +165,7 @@ function TweetUser({
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="center"
+                alignItems="baseline"
                 flexWrap={{ xs: 'nowrap', md: 'wrap' }}
               >
                 <IconButton>
@@ -137,26 +173,33 @@ function TweetUser({
                 </IconButton>
                 <Typography variant="subtitle2">{likes}</Typography>
               </Grid>
+
               <Grid
                 item
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="center"
+                alignItems="baseline"
+                flexWrap={{ xs: 'nowrap', md: 'wrap' }}
               >
                 <IconButton>
-                  <Share />
+                  <Statistics />
                 </IconButton>
+                <Typography variant="subtitle2">{statistics}</Typography>
               </Grid>
               <Grid
                 item
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="center"
+                alignItems="baseline"
+                flexWrap={{ xs: 'nowrap', md: 'wrap' }}
               >
                 <IconButton>
-                  <Statistics />
+                  <Share />
+                </IconButton>
+                <IconButton>
+                  <Bookmarks />
                 </IconButton>
               </Grid>
             </Grid>
