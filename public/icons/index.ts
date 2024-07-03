@@ -19,6 +19,7 @@ export { default as Link } from './Link.svg';
 export { default as Lists } from './Lists.svg';
 export { default as ListsFill } from './ListsFill.svg';
 export { default as Location } from './Location.svg';
+export { default as LogoIcon } from './Logo.svg';
 export { default as Messages } from './Messages.svg';
 export { default as MessagesFill } from './MessagesFill.svg';
 export { default as More } from './More.svg';

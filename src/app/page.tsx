@@ -1,8 +1,8 @@
 'use client';
 
+import Header from '@/components/Header';
 import InputSelect from '@/components/InputSelect';
 import useInputSelectOptionsData from '@/components/InputSelect/InputSelectOptions.hooks';
-import TweetUser from '@/components/TwettUser';
 
 export default function Home() {
   const {
@@ -20,45 +20,8 @@ export default function Home() {
   } = useInputSelectOptionsData();
 
   return (
-    <main
-    // style={{
-    //   width: '200px',
-    //   maxWidth: '200px',
-    // }}
-    >
-      <TweetUser
-        userName="Usuário Teste"
-        userEmail="userText"
-        date="Apr 1"
-        description="O truncamento deve ser aplicável condicionalmente nesta longa linha de texto, pois esta é uma linha muito mais longa do que o contêiner pode suportar."
-        comments="10"
-        retweets="10"
-        likes="10"
-        statistics="10"
-        imageUrl="/images/background-signup.png"
-      />
-      {/* <InputSelect
-        label="Mês"
-        options={months}
-        value={month}
-        onChange={handleMonthChange}
-        error={isError}
-      />
-      <InputSelect
-        label="Dia"
-        options={days}
-        value={day}
-        onChange={(_, newValue) => setDay(newValue)}
-        disabled={!days.length}
-        error={isError}
-      />
-      <InputSelect
-        label="Ano"
-        options={years}
-        value={year}
-        onChange={handleYearChange}
-        error={isError}
-      /> */}
+    <main>
+      <Header />
     </main>
   );
 }
