@@ -80,6 +80,17 @@ const theme = createTheme({
     success: { main: '#0CB245' },
   },
   components: {
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          elevation: 0,
+          boxShadow: 'none',
+          borderBottom: '2px solid #C4C4C4',
+          backgroundColor: '#FFFFFF',
+          color: '#000000',
+        },
+      },
+    },
     MuiButton: {
       variants: [
         {
