@@ -5,48 +5,35 @@ import {
   IconButton,
   Toolbar,
   useTheme,
+  AppBarProps as MuiAppBarProps,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import React from 'react';
+import React, { useState } from 'react';
 import { LogoIcon } from '../../../public/icons';
+import SidebarMenuOptions from '../SidebarMenuOptions';
+interface AppBarProps extends MuiAppBarProps {
+  open?: boolean;
+}
 
-type Props = {};
+function Header({}: AppBarProps) {
+  const [open, setOpen] = useState(false);
 
-function Header({}: Props) {
+  const handleDrawerOpen = () => {
+    setOpen(!open);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   const theme = useTheme();
   return (
-    <AppBar position="fixed">
-      <Toolbar>
-        <Grid container direction="row" flexWrap="nowrap">
-          <Grid item container direction="row">
-            <IconButton
-              sx={{
-                color: theme.palette.text.primary,
-                fill: theme.palette.text.primary,
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <IconButton>
-              <LogoIcon
-                style={{
-                  width: '40px',
-                  height: '40px',
-                }}
-              />
-            </IconButton>
-          </Grid>
-          <IconButton>
-            <Avatar
-              sx={{
-                width: '40px',
-                height: '40px',
-              }}
-            />
-          </IconButton>
-        </Grid>
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar position="fixed">
+        <Toolbar>
+          <Grid container direction="row" flexWrap="nowrap"></Grid>
+        </Toolbar>
+      </AppBar>
+    </>
   );
 }
 
