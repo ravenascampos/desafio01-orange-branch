@@ -1,4 +1,5 @@
-import { MoreHoriz } from '@mui/icons-material';
+'use client';
+
 import {
   Avatar,
   Divider,
@@ -16,6 +17,7 @@ import {
   Retweet,
   Share,
   Statistics,
+  MoreHorizontal,
 } from '../../../public/icons';
 import Image from 'next/image';
 
@@ -207,7 +209,7 @@ function TweetUser({
         </Grid>
         <Grid item>
           <IconButton>
-            <MoreHoriz />
+            <MoreHorizontal />
           </IconButton>
         </Grid>
       </Grid>

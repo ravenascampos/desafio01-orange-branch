@@ -1,10 +1,11 @@
+'use client';
+
 import {
   Avatar,
-  ListItem,
-  ListItemAvatar,
-  ListItemButton,
-  ListItemText,
+  Grid,
+  IconButton,
   Typography,
+  useMediaQuery,
   useTheme,
 } from '@mui/material';
 import React from 'react';
@@ -14,38 +15,43 @@ type SidebarUserInfoProps = {};
 
 function SidebarUserInfo({}: SidebarUserInfoProps) {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <ListItem
+    <Grid
+      container
       alignItems="center"
-      sx={{
-        width: '268px',
-      }}
+      direction={isSmallScreen ? 'column' : 'row'}
+      flexWrap="nowrap"
+      columnSpacing={1}
     >
-      <ListItemAvatar>
+      <Grid item>
         <Avatar />
-      </ListItemAvatar>
-      <ListItemText
-        primary="User Teste"
-        primaryTypographyProps={{
-          color: theme.palette.text.primary,
-          variant: 'subtitle1',
-        }}
-        secondary={
-          <>
+      </Grid>
+      {!isSmallScreen ? (
+        <Grid
+          item
+          container
+          direction="row"
+          flexWrap="nowrap"
+          columnSpacing={3}
+        >
+          <Grid item container direction="column">
+            <Typography color={theme.palette.text.primary} variant="subtitle1">
+              User Teste
+            </Typography>
+
             <Typography variant="subtitle2" color={theme.palette.text.primary}>
               @usuarioTeste
             </Typography>
-          </>
-        }
-      />
-      <ListItemButton
-        sx={{
-          marginLeft: '3rem',
-        }}
-      >
-        <MoreHorizontal />
-      </ListItemButton>
-    </ListItem>
+          </Grid>
+          <Grid item container>
+            <IconButton>
+              <MoreHorizontal />
+            </IconButton>
+          </Grid>
+        </Grid>
+      ) : null}
+    </Grid>
   );
 }
 
