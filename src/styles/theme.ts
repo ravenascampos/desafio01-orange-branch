@@ -100,7 +100,7 @@ const theme = createTheme({
             backgroundColor: '#DC6400',
             color: '#FFFFFF',
             borderRadius: '50px',
-            width: '80%',
+            padding: '10px 18px',
             '&:hover': {
               backgroundColor: '#FFFFFF',
               color: '#DC6400',

@@ -1,3 +1,5 @@
+'use client';
+
 import {
   IconButton,
   InputAdornment,
@@ -33,6 +35,7 @@ function Input({ label, type, id, variant, placeholder, error }: Props) {
       type={type}
       id={id}
       placeholder={placeholder}
+      fullWidth
       InputProps={{
         endAdornment:
           type !== 'password' ? null : (
