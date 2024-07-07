@@ -1,3 +1,4 @@
+'use cient';
 import React from 'react';
 import { Button as MuiButton, SvgIcon } from '@mui/material';
 import { Google } from '../../../public/icons';
@@ -13,6 +14,7 @@ type ButtonProps = {
   icon?: React.ReactNode;
   linkComponent?: React.ElementType | undefined;
   to?: string;
+  fullWidth?: boolean;
 };
 
 function Button({
@@ -22,6 +24,7 @@ function Button({
   icon,
   linkComponent,
   to,
+  fullWidth,
 }: ButtonProps) {
   return (
     <MuiButton
@@ -29,6 +32,7 @@ function Button({
       to={to}
       variant={variant}
       disabled={disabled}
+      fullWidth={fullWidth}
       startIcon={variant !== 'outlinedIcon' ? null : icon}
     >
       {text}
