@@ -2,20 +2,6 @@ import Sidebar from '@/components/Sidebar';
 import TweetUser from '@/components/TwettUser';
 
 export default function Home() {
-  // const {
-  //   day,
-  //   month,
-  //   year,
-  //   days,
-  //   months,
-  //   years,
-  //   setDay,
-  //   error,
-  //   isError,
-  //   handleMonthChange,
-  //   handleYearChange,
-  // } = useInputSelectOptionsData();
-
   return (
     <main
       style={{

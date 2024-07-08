@@ -16,7 +16,7 @@ function Container({ children }: { children: React.ReactNode }) {
       sx={{
         display: 'flex',
         flexDirection: isSmallDevice ? 'column' : 'row',
-        height: '100dvh',
+        height: !isSmallDevice ? '100dvh' : '100%',
         width: '100%',
         overflow: 'hidden',
         padding: !isSmallDevice ? '0 !important' : '16px !important',
