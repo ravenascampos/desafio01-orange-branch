@@ -139,6 +139,8 @@ const theme = createTheme({
             border: '1px solid #00000066',
             borderRadius: '50px',
             color: '#000000',
+            width: '100%',
+            maxWidth: '400px',
             '&:hover': {
               color: '#DC6400',
               border: '1px solid #DC6400',
