@@ -1,3 +1,4 @@
+import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import TweetUser from '@/components/TwettUser';
 
@@ -8,9 +9,9 @@ export default function Home() {
         display: 'flex',
       }}
     >
-      {/* <Header /> */}
-      <Sidebar />
-      <TweetUser
+      <Header />
+      {/* <Sidebar /> */}
+      {/* <TweetUser
         userName="User Test"
         userEmail="userTest"
         comments="10"
@@ -19,7 +20,7 @@ export default function Home() {
         likes="10"
         retweets="10"
         statistics="10"
-      />
+      /> */}
     </main>
   );
 }
