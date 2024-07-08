@@ -1,9 +1,14 @@
-import React from 'react';
+import Container from './components/Container';
+import SignupOptions from './components/SignupOptions';
 
 type Props = {};
 
-function SignUpPage({}: Props) {
-  return <div>SignUpPage</div>;
+function SignUpPage() {
+  return (
+    <Container>
+      <SignupOptions />
+    </Container>
+  );
 }
 
 export default SignUpPage;
