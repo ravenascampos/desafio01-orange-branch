@@ -15,11 +15,12 @@ type SidebarUserInfoProps = {};
 
 function SidebarUserInfo({}: SidebarUserInfoProps) {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.up('md'));
   return (
     <Grid
       container
       alignItems="center"
+      justifyContent="space-between"
       direction={isSmallScreen ? 'column' : 'row'}
       flexWrap="nowrap"
       columnSpacing={1}

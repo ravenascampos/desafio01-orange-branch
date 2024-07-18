@@ -14,22 +14,14 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import React, { useState } from 'react';
 import { ArrowBack, LogoIcon, News } from '../../../public/icons';
-import SidebarMenuOptions from '../SidebarMenuOptions';
 import HeaderMobile from './HeaderMobile';
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
+  toggleDrawer: () => void;
 }
 
 function Header({}: AppBarProps) {
   const [open, setOpen] = useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(!open);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
   const theme = useTheme();
   const isSmallDevice = useMediaQuery(theme.breakpoints.down('sm'));
   return isSmallDevice ? (
