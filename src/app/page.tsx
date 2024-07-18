@@ -1,26 +1,62 @@
-import Header from '@/components/Header';
-import Sidebar from '@/components/Sidebar';
-import TweetUser from '@/components/TwettUser';
+import Button from '@/components/Button';
+import Input from '@/components/Input';
+import { Container, Grid, Typography } from '@mui/material';
+import React from 'react';
+import { LogoIcon } from '../../public/icons';
+import Link from 'next/link';
 
-export default function Home() {
+type Props = {};
+
+function LoginPage({}: Props) {
   return (
-    <main
-      style={{
+    <Container
+      sx={{
+        height: '100dvh',
+        width: '100%',
         display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
       }}
     >
-      <Header />
-      {/* <Sidebar /> */}
-      {/* <TweetUser
-        userName="User Test"
-        userEmail="userTest"
-        comments="10"
-        description="kfkgl jkrjjfrkl kfkkfkkfkf kskfkkfkfkkfkf kckkckkc ffjkkfkfk"
-        date="1 abr"
-        likes="10"
-        retweets="10"
-        statistics="10"
-      /> */}
-    </main>
+      <Grid container sx={{ maxWidth: '450px', padding: '20px' }}>
+        <Grid
+          container
+          direction="column"
+          alignItems="flex-start"
+          rowGap={2}
+          mb={4}
+        >
+          <LogoIcon
+            style={{
+              width: '70px',
+              height: '70px',
+            }}
+          />
+          <Typography variant="h2">Entre no OrangeX</Typography>
+        </Grid>
+        <Grid container rowGap={2}>
+          <Input id="email" type="email" label="E-mail" variant="outlined" />
+          <Input
+            id="password"
+            type="password"
+            label="Senha"
+            variant="outlined"
+          />
+          <Button fullWidth={true} text="Entrar" variant="primaryContained" />
+        </Grid>
+        <Grid container flexWrap="nowrap" justifyContent="space-between" mt={6}>
+          <Link href={''}>
+            <Button text="Esqueceu a senha?" variant="text" />
+          </Link>
+
+          <Link href={'/signup'}>
+            <Button text="Criar uma conta" variant="text" />
+          </Link>
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
+
+export default LoginPage;
